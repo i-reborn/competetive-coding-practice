@@ -1,3 +1,5 @@
+// To check if the expression has balanced paranthesis
+
 #include <bits/stdc++.h>
 using namespace std;
 
