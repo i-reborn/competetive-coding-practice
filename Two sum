@@ -1,0 +1,40 @@
+//To check if any two numbers in array add up to the given sum - O(n)
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+	int arr[100];
+	int num,sum;
+	cin>>num;
+	for(int i=0;i<num;i++)
+	{
+		cin>>arr[i];
+	}
+	sort(arr,arr+num);
+	cin>>sum;
+	int j=0,k=num-1;
+	while(j<k)
+	{
+		if(arr[j]+arr[k]==sum)
+		{
+			break;
+		}
+		if(arr[j]+arr[k]<sum)
+		{
+			j++;
+		}
+		if(arr[j]+arr[k]>sum)
+		{
+			k--;
+		}
+	}
+	if(j<k)
+	{
+		cout<<"Present "<<arr[j]<<" "<<arr[k];
+	}
+	else
+	{
+		cout<<"Not present";
+	}
+	return 0;
+}
